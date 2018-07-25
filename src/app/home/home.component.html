@@ -1,0 +1,48 @@
+
+
+<div class="container">
+  <h1>{{welcome}}</h1>
+<div class="row">
+
+    <div class="col-sm-12" *ngIf="!show">
+        Nie ma produktów w bazie. Chesz dodać? 
+        <button class="btn btn-default" routerLink="/add">dodaj produkt</button>
+      </div>
+    
+<div class="col-sm-6" *ngIf="show">
+    <table class="table table-condensed">
+        <thead>
+        <tr>
+          <th>nazwa produktu</th>
+          <th>opis produktu </th>
+          <th>cena</th>
+          <th>Producent</th>
+          <th>ilość w magazynie</th>
+          <th>Czy w promocji</th>
+          <th>numer seryjny</th>
+          <th>zdjęcie produktu</th>
+         
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of array">         
+          <td>{{product.name}}</td>
+          <td>{{product.description}}</td>
+          <td>{{product.price}}</td>
+          <td>{{product.producer}}</td>
+          <td>{{product.quantity}}</td>
+          <td>{{product.promotion}}</td>
+          <td>{{product.serialNo}}</td>
+          <td><img class="img" src="{{product.picture}}"></td>
+          <td><button class="btn btn-danger" (click)="onDelete(serialNo.value)" value="{{product.serialNo}}" #serialNo>skasuj</button></td>
+          <td><button class="btn btn-success" routerLink="/update" (click)="routeSerialNo(serialNo.value)">aktualizuj</button></td>
+          <td><button class="btn btn-default" routerLink="/add">dodaj produkt</button> </td>
+        </tr>
+      </tbody>     
+       
+      </table>
+</div>
+
+</div>
+</div>
+
