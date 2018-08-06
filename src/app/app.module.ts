@@ -7,20 +7,31 @@ import { HomeComponent } from './home/home.component';
 import { UpdateComponent } from './update/update.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { AddComponent } from './add/add.component';
+import { ProductsComponent } from './products/products.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     UpdateComponent,
-    AddComponent  
+    AddComponent,
+    ProductsComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
-    
+    AppRoutingModule,
+    NgbModule.forRoot(),
+    FormsModule,
+    ReactiveFormsModule
   ],
+  entryComponents: [],
+  exports: [],
+
   providers: [MainService],
   bootstrap: [AppComponent]
 })

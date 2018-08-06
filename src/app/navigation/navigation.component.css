@@ -1,0 +1,15 @@
+
+ .row-top {
+   min-height: 10%;
+ }
+
+ .row-nav {
+  min-height: 60%;
+ }
+
+ .container {
+   height: 100%;
+   position: inherit;
+ }
+
+
