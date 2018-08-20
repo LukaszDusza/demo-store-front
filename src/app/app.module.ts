@@ -11,6 +11,8 @@ import { ProductsComponent } from './products/products.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavigationComponent } from './navigation/navigation.component';
+import { CategoryComponent } from './category/category.component';
+import { ProducerComponent } from './producer/producer.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { NavigationComponent } from './navigation/navigation.component';
     UpdateComponent,
     AddComponent,
     ProductsComponent,
-    NavigationComponent
+    NavigationComponent,
+    CategoryComponent,
+    ProducerComponent
   ],
   imports: [
     BrowserModule,

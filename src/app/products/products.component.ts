@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { MainService, Product } from '../main.service';
 
 @Component({
@@ -9,18 +9,20 @@ import { MainService, Product } from '../main.service';
 export class ProductsComponent implements OnInit {
 
   welcome = 'Twoje produkty';
-  show = true;
+
+  show: boolean;
+
   array = new Array<Product>();
 
   constructor( private main: MainService) {  }
 
-
-  ngOnInit() {
-   this.array = this.showProducts();
+  ngOnInit(): void {
+  this.show = true;
+  this.array = this.showProducts();
  }
 
 
- showProducts() {
+ showProducts(): Array<Product> {
    const array = new Array<Product>();
 
    this.main.getProducts().subscribe(result => {
@@ -37,7 +39,7 @@ export class ProductsComponent implements OnInit {
    return array;
  }
 
- onDelete(serialNo) {
+ onDelete(serialNo): void {
    this.main.delete(serialNo).subscribe(
      (data) => {
        console.log(data);
@@ -46,12 +48,10 @@ export class ProductsComponent implements OnInit {
      }, () => {
        this.ngOnInit();
        console.log('complete');
-
      });
  }
 
- routeSerialNo(product) {
-
+ routeSerialNo(product): void {
 this.main.keepCurrentProduct(product);
  }
 

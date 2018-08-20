@@ -9,6 +9,8 @@ export class UpdateComponent implements OnInit {
 
   constructor() { }
 
+  title = 'Aktualizacja produktu.';
+
   ngOnInit() {
   }
 

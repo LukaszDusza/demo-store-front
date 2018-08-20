@@ -8,16 +8,29 @@
       <li class="nav-item">
           <a class="nav-link" routerLink="/products">Produkty</a>
       </li>
+
         <li class="nav-item">
           <div ngbDropdown class="d-inline-block" style="cursor: pointer;">
-            <a class="nav-link" id="dropdownBasic1" ngbDropdownToggle>Opcje</a>
-            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <a class="nav-link" id="dropdown1" ngbDropdownToggle>Opcje</a>
+            <div ngbDropdownMenu aria-labelledby="dropdown1">
               <a class="dropdown-item" routerLink="/add">Dodaj produkt</a>
               <a class="dropdown-item" routerLink="/category">Dodaj kategorie</a>
               <a class="dropdown-item" routerLink="/producer">Dodaj producenta</a>
             </div>
           </div>
         </li>
+
+        <li class="nav-item">
+            <div ngbDropdown class="d-inline-block" style="cursor: pointer;">
+              <a class="nav-link" id="dropdown2" ngbDropdownToggle>Statystyki</a>
+              <div ngbDropdownMenu aria-labelledby="dropdown2">
+                <a class="dropdown-item" routerLink="/">opcja 1</a>
+                <a class="dropdown-item" routerLink="/">opcja 2</a>
+                <a class="dropdown-item" routerLink="/">opcja 3</a>
+              </div>
+            </div>
+          </li>
+
         <!-- <li class="nav-item">
             <a class="nav-link" href="#">Nav 2</a>
         </li> -->
